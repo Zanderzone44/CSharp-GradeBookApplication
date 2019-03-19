@@ -44,7 +44,8 @@ namespace GradeBook.UserInterfaces
             BaseGradeBook gradebook;
             if (type == "standard")
                 gradebook = new StandardGradeBook(name);
-            else if (type == "ranked") ;
+            else if (type == "ranked")
+                gradebook = new RankedGradeBook(name);
             else
             {
                 Console.WriteLine("{0} is not a suppoted type of gradebook, please try again.", type);
@@ -78,7 +79,7 @@ namespace GradeBook.UserInterfaces
             Console.WriteLine();
             Console.WriteLine("GradeBook accepts the following commands:");
             Console.WriteLine();
-            Console.WriteLine("Create 'Name' - Creates a new gradebook where 'Name' is the name of the gradebook and 'Type' is what type of grading it should use.");
+            Console.WriteLine("Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook and 'Type' is what type of grading it should use.");
             Console.WriteLine();
             Console.WriteLine("Load 'Name' - Loads the gradebook with the provided 'Name'.");
             Console.WriteLine();
